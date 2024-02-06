@@ -1017,7 +1017,7 @@ export interface ApiTechnologyTechnology extends Schema.CollectionType {
     name: Attribute.String & Attribute.Unique;
     value: Attribute.String & Attribute.Unique;
     slug: Attribute.String & Attribute.Unique;
-    Description: Attribute.RichText;
+    description: Attribute.RichText;
     Title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
