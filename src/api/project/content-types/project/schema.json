@@ -49,7 +49,7 @@
     "uid": {
       "type": "uid"
     },
-    "Link": {
+    "link": {
       "displayName": "Link",
       "type": "component",
       "repeatable": true,

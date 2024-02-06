@@ -944,7 +944,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     slug: Attribute.String & Attribute.Unique;
     blurb: Attribute.Text;
     uid: Attribute.UID;
-    Link: Attribute.Component<'link.link', true>;
+    link: Attribute.Component<'link.link', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
