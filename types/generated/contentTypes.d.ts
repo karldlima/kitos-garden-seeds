@@ -867,6 +867,7 @@ export interface ApiPostPost extends Schema.CollectionType {
       'api::technology.technology'
     >;
     blurb: Attribute.Text;
+    image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
