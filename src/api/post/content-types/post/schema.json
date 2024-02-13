@@ -15,12 +15,10 @@
     "title": {
       "type": "string"
     },
-    "uid": {
-      "type": "uid"
-    },
     "slug": {
       "type": "string",
-      "unique": true
+      "unique": true,
+      "required": true
     },
     "description": {
       "type": "richtext"
@@ -42,14 +40,15 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

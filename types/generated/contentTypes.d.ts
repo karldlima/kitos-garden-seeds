@@ -795,7 +795,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Unique;
     value: Attribute.String & Attribute.Unique;
-    slug: Attribute.String & Attribute.Unique;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -852,8 +852,7 @@ export interface ApiPostPost extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    uid: Attribute.UID;
-    slug: Attribute.String & Attribute.Unique;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     description: Attribute.RichText;
     date: Attribute.Date;
     category: Attribute.Relation<
@@ -878,7 +877,7 @@ export interface ApiPostPost extends Schema.CollectionType {
   };
 }
 
-export interface ApiPostPagePostPage extends Schema.CollectionType {
+export interface ApiPostPagePostPage extends Schema.SingleType {
   collectionName: 'post_pages';
   info: {
     singularName: 'post-page';
@@ -891,14 +890,12 @@ export interface ApiPostPagePostPage extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    slug: Attribute.String & Attribute.Unique;
     description: Attribute.RichText;
     posts: Attribute.Relation<
       'api::post-page.post-page',
       'oneToMany',
       'api::post.post'
     >;
-    uid: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -942,9 +939,8 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'oneToMany',
       'api::technology.technology'
     >;
-    slug: Attribute.String & Attribute.Unique;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     blurb: Attribute.Text;
-    uid: Attribute.UID;
     link: Attribute.Component<'link.link', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -964,7 +960,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
-export interface ApiProjectPageProjectPage extends Schema.CollectionType {
+export interface ApiProjectPageProjectPage extends Schema.SingleType {
   collectionName: 'project_pages';
   info: {
     singularName: 'project-page';
@@ -977,14 +973,12 @@ export interface ApiProjectPageProjectPage extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String;
-    slug: Attribute.String & Attribute.Unique;
     description: Attribute.RichText;
     projects: Attribute.Relation<
       'api::project-page.project-page',
       'oneToMany',
       'api::project.project'
     >;
-    uid: Attribute.UID;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1017,7 +1011,7 @@ export interface ApiTechnologyTechnology extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Unique;
     value: Attribute.String & Attribute.Unique;
-    slug: Attribute.String & Attribute.Unique;
+    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     description: Attribute.RichText;
     Title: Attribute.String;
     createdAt: Attribute.DateTime;

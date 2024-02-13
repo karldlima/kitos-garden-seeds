@@ -41,13 +41,11 @@
     },
     "slug": {
       "type": "string",
-      "unique": true
+      "unique": true,
+      "required": true
     },
     "blurb": {
       "type": "text"
-    },
-    "uid": {
-      "type": "uid"
     },
     "link": {
       "displayName": "Link",

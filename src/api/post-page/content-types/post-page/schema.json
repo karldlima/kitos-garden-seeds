@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "post_pages",
   "info": {
     "singularName": "post-page",
@@ -15,10 +15,6 @@
     "title": {
       "type": "string"
     },
-    "slug": {
-      "type": "string",
-      "unique": true
-    },
     "description": {
       "type": "richtext"
     },
@@ -26,9 +22,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::post.post"
-    },
-    "uid": {
-      "type": "uid"
     }
   }
 }
