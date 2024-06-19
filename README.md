@@ -1,1 +1,1 @@
-This is a Strapi CMS bootstraped repo to serve as a middleware layer between the Strapi API endpoints and my frontend facing application which can be found at (Karls Garden)[https://github.com/karldlima/kitos-garden]
+This is a Strapi CMS bootstraped repo to serve as a middleware layer between the Strapi API endpoints and my frontend facing application which can be found at https://github.com/karldlima/kitos-garden
